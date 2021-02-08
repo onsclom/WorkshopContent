@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1</title>
+  <link rel="stylesheet" href="lesson.css"/>
+</head>
+
+
+<div class="stackedit__html">
+  <a href="https://onsclom.github.io/WorkshopContent"> back </a>
+  <h1 id="lesson-1---starting-with-p5.js">Lesson 1 - Starting with p5.js</h1>
+  <p>Welcome to the first “real” lesson of the workshop! In this lesson we will explore the p5.js official documentation, learn fundamentals for programming, and begin our first programming exercise.</p>
+  <h2 id="p5.js-official-get-started">p5.js Official “Get Started”</h2>
+  <p>Popular open source tools often have an impressive team of contributors dedicated to creating wonderful official documentation. p5.js is a perfect example of this. Instead of reinventing the wheel, this workshop will point to official documentation as much as possible. Reading and understanding documentation is an important skill that when practiced will open the door to learning more and more technologies.</p>
+  <p>Let us start by using the <a href="https://p5js.org/get-started/">p5.js official Get Started documentation</a> to get the hang of the p5.js web editor. Following along until reaching the “What Next?” section should take less than 5 minutes. This page is not necessarily targeted for beginners, so do not feel bad if you do not understand the examples you are copying. Once you are finished,  continue with <strong>Default Code Analysis</strong> to analyze the examples we ran in more detail.</p>
+  <h2 id="default-code-analysis">Default Code Analysis</h2>
+  <p>First off, congratulations if this was your first time reading official programming documentation! Throughout the course you will be doing much more of this. You now have knowledge about the basics of the p5.js web editor, how to input and change code, and how to run that code. So now, let us analyze the default code that exists when you open the web editor:</p>
+  <pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">createCanvas</span><span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token keyword">function</span> <span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">background</span><span class="token punctuation">(</span><span class="token number">220</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  </code></pre>
+  <p>This code is defining two functions, <code>setup</code> and <code>draw</code>. These are important functions in p5.js because they are <em>called</em> at specific times. When you press play, <code>setup</code> is <em>called</em> once and then <code>draw</code> is <em>called</em> for the refresh rate of your display per second (60 times per second for most monitors). The contents of each function are included between <code>{</code> and <code>}</code>.</p>
+  <p>So now let us look at the contents of the setup function:</p>
+  <pre class=" language-javascript"><code class="prism  language-javascript"><span class="token function">createCanvas</span><span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  </code></pre>
+  <p>As you may have guessed, this creates a canvas, the area for graphics, with a 400 pixel width and 400 pixel height. Using programming vocabulary, this can be described as <em>calling</em> the function <code>createCanvas</code> with the the <em>parameters</em> or <em>arguments</em> <code>400</code> and <code>400</code>. p5.js gives you many functions like this to do things like drawing shapes, handling input, playing sounds, and more.</p>
+  <p>The <a href="https://p5js.org/reference/">p5.js reference page</a> lists all these functions, explains the parameters they take, describes what they do, and often contain an example using that function.  Instead of focusing on memorizing the all of these functions, it is much more useful to learn how to efficiently use the reference page. Check out the <a href="https://p5js.org/reference/#/p5/createCanvas">createCanvas() reference</a> to see how a function you already know is explained.</p>
+  <h2 id="exercise-1">Exercise 1</h2>
+  <p>While I could continue analyzing code of increasing complexity forever and perhaps put you to sleep, you already know enough to start doing some experimentation and learning yourself! Each lesson in this workshop will end with an open ended exercise where you choose how much time you would like to commit.</p>
+  <p><strong>Basic (~15 mins to complete):</strong></p>
+  <ul>
+  <li>In the <a href="https://p5js.org/reference/#group-Shape">p5.js reference shape section</a>, pick out some 2D primitive shapes that sound interesting, read their pages, and try drawing them to the screen in the web editor with different dimensions. Get creative and perhaps draw something with the shapes! For some inspiration checkout the first game I ever made: <a href="https://browser-p5-game.herokuapp.com/">birds</a>. It was created with p5.js and the graphics are exclusively made out of 2D primitive shapes.</li>
+  </ul>
+  <p><strong>Additional advanced learning prompts:</strong></p>
+  <ul>
+  <li>We have already learned some basic JavaScript like defining functions and calling functions. However there are some very useful things we have not learned yet: variables, if statements, and loops. Do some research and try to incorporate these concepts into a p5.js project. Hint: the last example of the <a href="https://p5js.org/get-started/">p5.js official Get Started documentation</a> uses an if statement with the <code>mouseIsPressed</code> variable. Try understanding how it works and edit it to have different behavior.</li>
+  <li>I highly recommend checking out <a href="https://www.youtube.com/watch?v=0j86zuqqTlQ">The Coding Train’s Bouncing DVD Logo</a> video. It is targetted towards beginners and you will get to see what the process of making something in p5.js looks like. The Coding Train is a great youtube channel with a ton of tutorials centered around programming and p5.js. Follow along with this video and add your own twist to the project, or perhaps take what you have learned and come up with your own project.</li>
+  </ul>
+  <h2 id="errors">Errors</h2>
+  <p>Understanding errors is a hugely useful skill for programming. When doing your exercise 1, it is unlikely you will write perfect error-free code your first time. It is very easy to make some mistake or typo while coding, but error messages make finding and fixing mistakes easy. While the “Get Started” page briefly covered errors, I would like to look at a specific example. Let us use this very simple code:</p>
+  <pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">createCanvas</span><span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">circle</span><span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  </code></pre>
+  <p>The code is simply aiming to create a canvas, and draw a circle at (40, 40). It does not even define an <code>update</code> function, which is perfectly legal. However, when running this code in the editor, we see an error in the console.</p>
+  <blockquote>
+  <p>🌸 p5.js says: circle() was expecting at least 3 arguments, but received only 2. (on line 73 in about:srcdoc [about:srcdoc:73:3]). (<a href="http://p5js.org/reference/#/p5/circle">http://p5js.org/reference/#/p5/circle</a>)</p>
+  </blockquote>
+  <p>The most important part of this error is <em>circle() was expecting at least 3 arguments, but received only 2</em>. As we learned earlier in this lesson, arguments are the values in between the <code>(</code> and <code>)</code> of function calls. This error even gave us a handy link the <code>circle()</code> reference page! Looking at the reference page we learn that the third missing argument is diameter. By adding a diameter of 40, our code becomes:</p>
+  <pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">createCanvas</span><span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">circle</span><span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  </code></pre>
+  <p>And it works! A canvas is made and a circle is drawn without any errors. The lesson here is to not be afraid of errors. They are very useful tools in finding your mistakes and getting your program working.</p>
+  <h2 id="sharing-progress">Sharing Progress</h2>
+  <p>Whether you spent 15  minutes on the basic exercise or you went above and beyond with additional resources for hours, you should share your experience and project in the Discord server! Sharing a project with the p5.js web editor is very easy:</p>
+  <ol>
+  <li>Make an account or login using Google or GitHub</li>
+  <li>File -&gt; Save</li>
+  <li>File -&gt; Share</li>
+  <li>Copy the Edit link so others may see your code and run it</li>
+  </ol>
+  <p>In Discord, I have made the text channel #exercise1. Share your project, share any additional resources you found, and talk about what the experience of this lesson was like for you.</p>
+  <h2 id="conclusion">Conclusion</h2>
+  <p>If you had little to no coding experience, this lesson covered a lot for you! You read programming documentation, learned fundamentals for programming, and even made your first project of the workshop. If vocabulary like defining functions, arguments, parameters, and calling functions still seem confusing, that is to be expected. Learning programming takes practice and time. By continuing with this workshop, making projects, and doing your own research you will get the hang of things more and more. Keep up the progress and soon you will be able to tackle whatever projects come to your mind.</p>
+  <p>I hope you enjoyed the lesson! In the next lesson we will be looking at using p5.js to create our first game.</p>
+  </div>
+
+</html>
